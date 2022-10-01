@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Panel, PanelHeader} from '@vkontakte/vkui';
 
-const Home = ({ id}) => (
+const Home = ({id, friends}) => (
 	<Panel id={id}>
 		<PanelHeader>Example</PanelHeader>
 		{/* {fetchedUser &&
@@ -23,6 +23,7 @@ const Home = ({ id}) => (
 				</Button>
 			</Div>
 		</Group> */}
+		{friends.map(friend => <Avatar size={100} src={friend.photo_100}/>)}
 	</Panel>
 );
 
