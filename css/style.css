@@ -1,0 +1,65 @@
+.body {
+    background-color: #111;
+    /* display: flex; */
+}
+
+.items_container {
+    width: 100%;
+    top: 40px;
+    position: absolute;
+}
+
+.photo_container {
+    width: 299px;
+    height: 435px;
+    margin: 0px auto;
+    
+    border: 5px dashed #447BBA;
+    border-radius: 10px;
+    display: flex;
+}
+
+.photo_button {
+    box-sizing: border-box;
+
+    /* position: relative; */
+    width: 205px;
+    height: 205px;
+    margin: auto auto;
+    /* left: 77px;
+    top: 153px; */
+
+    border: 5px dashed #447BBA;
+    border-radius: 10px;
+    /* display: flex; */
+}
+
+.camera_icon {
+    /* color: #447BBA; */
+    /* background-color: #447BBA; */
+    fill: #447BBA;
+    width: 180px;
+    height: 150px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.camera_button_text {
+    position: relative;
+    width: 180px;
+    height: 38px;
+    /* left: 80px; */
+    top: 5px;
+    margin: 5px auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    /* display: flex; */
+    /* align-items: flex-end; */
+    text-align: center;
+
+    color: #447BBA;
+}
