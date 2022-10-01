@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Panel, PanelHeader} from '@vkontakte/vkui';
+import { Avatar, Gallery, Panel, PanelHeader} from '@vkontakte/vkui';
 
 const Home = ({id, friends}) => (
 	<Panel id={id}>
@@ -23,7 +23,7 @@ const Home = ({id, friends}) => (
 				</Button>
 			</Div>
 		</Group> */}
-		{friends.map(friend => <Avatar size={100} src={friend.photo_100}/>)}
+		{friends.map(friend => <img src={friend.photo_100} key = {Math.random()}/>)}
 	</Panel>
 );
 

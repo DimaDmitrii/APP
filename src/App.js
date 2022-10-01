@@ -4,7 +4,6 @@ import { View, AdaptivityProvider, AppRoot, ConfigProvider, SplitLayout, SplitCo
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
-import Persik from './panels/Persik';
 
 const App = () => {
 	const [scheme, setScheme] = useState('bright_light')
@@ -29,11 +28,13 @@ const App = () => {
 			  const data = await bridge.send("VKWebAppCallAPIMethod", {
 				method: "friends.get",
 				request_id: "getFriends",
-				params: {order: "hints", fields:'photo_100', v:"5.131", access_token:token.access_token}});
-				setFriends(data.response.items)
+				params: {order: "random", count: "5", fields:'photo_100', v:"5.131", access_token: token.access_token},
+			});
+				
 				console.log(data.response.items)
+				setFriends(data.response.items)
 		}
-		fetchFriends()
+		fetchFriends();
 	}, []);
 
 	const go = e => {
@@ -48,7 +49,6 @@ const App = () => {
 						<SplitCol>
 							<View activePanel={activePanel}>
 								<Home id='home' friends = {friends} />
-								{/* <Persik id='persik' go={go} /> */}
 							</View>
 						</SplitCol>
 					</SplitLayout>
