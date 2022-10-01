@@ -33,7 +33,7 @@ const App = () => {
 				setFriends(data.response.items)
 				console.log(data.response.items)
 		}
-		fetchFriends();
+		fetchFriends()
 	}, []);
 
 	const go = e => {
