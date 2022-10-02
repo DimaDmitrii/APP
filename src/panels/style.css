@@ -1,0 +1,124 @@
+.body {
+    /* background-color: #111; */
+    /* background-image: url(../img/fonk.png); */
+    width: 100%;
+    
+    /* display: flex; */
+    position: relative;
+}
+
+.items_container {
+    width: 100%;
+    top: 60px;
+    position: relative;
+}
+
+.photo_container {
+    width: 299px;
+    height: 435px;
+    margin: 0px auto;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(0,173,33,1) 50%, rgba(253,187,45,0) 100%);
+    /* border: 5px dashed #00AD21; */
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+}
+
+.photo_button {
+    box-sizing: border-box;
+
+    /* position: relative; */
+    width: 205px;
+    height: 205px;
+    margin: auto auto;
+    /* left: 77px;
+    top: 153px; */
+
+    border: 5px dashed #447BBA;
+    border-radius: 10px;
+    /* display: flex; */
+}
+
+.camera_icon {
+    /* color: #447BBA; */
+    /* background-color: #447BBA; */
+    fill: #447BBA;
+    width: 130px;
+    height: 130px;
+    margin: 0px auto;
+    position: relative;
+}
+.photo_icon{
+    margin-left: auto;
+    margin-right:auto;
+    position: relative;
+}
+.camera_button_text {
+    position: relative;
+    width: 180px;
+    height: 38px;
+    /* left: 80px; */
+    top: 5px;
+    margin: 5px auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    /* display: flex; */
+    /* align-items: flex-end; */
+    text-align: center;
+
+    color: #447BBA;
+}
+/* .panell{
+    background-image: url(../img/fonk.png);
+} */
+.podpis{
+    display: block;
+    margin-top:50px;
+    text-align: center;
+}
+
+
+.items_container_1 {
+    width: 100%;
+    height: 434px;
+    top: 600px;
+    position: absolute;
+    
+}
+
+.background_photo {
+    /* background-image: url(../src/img/channels4_profile.jpg); */
+    background-position:center center;
+    background-size:cover;
+    width: 299px;
+    height: 434px;
+    margin: 0px auto;
+    display: flex;
+    border-radius: 10px;
+    
+}
+
+.photo {
+    width: 299px;
+    height: 299px;
+    margin: auto 0px;
+    /* background-image: url(../src/img/channels4_profile.jpg); */
+    background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.blur {
+    height: 434px;
+    width: 299px;
+    display: flex;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    
+}

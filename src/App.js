@@ -4,11 +4,13 @@ import { View, AdaptivityProvider, AppRoot, ConfigProvider, SplitLayout, SplitCo
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
+import background from './img/fonk.png';
 
 const App = () => {
 	const [scheme, setScheme] = useState('bright_light')
 	const [activePanel, setActivePanel] = useState('home');
 	const [friends, setFriends] = useState([]);
+	const [our_tegs, setTegs] = useState([])
 	//const [fetchedUser, setUser] = useState(null);
 	//const [popout, setPopout] = useState(null);
 
@@ -19,7 +21,7 @@ const App = () => {
 			}
 		});
 
-		async function fetchFriends() {
+		async function fetchFriends() { //Artyoma's API
 			const token = await bridge.send("VKWebAppGetAuthToken", { 
 				"app_id": 51438734, 
 				"scope": "friends,status"
@@ -28,13 +30,41 @@ const App = () => {
 			  const data = await bridge.send("VKWebAppCallAPIMethod", {
 				method: "friends.get",
 				request_id: "getFriends",
-				params: {order: "random", count: "5", fields:'photo_100', v:"5.131", access_token: token.access_token},
+				params: {order: "random", count: "3", fields:'photo_200_orig', v:"5.131", access_token: token.access_token},
 			});
-				
-				console.log(data.response.items)
 				setFriends(data.response.items)
+				return data.response.items
 		}
-		fetchFriends();
+		// fetchFriends();
+
+		async function submit() { // Roma's API
+
+			let link = `https://kostil74.herokuapp.com/` 
+			let link_2 = await fetchFriends()
+			for(let i = 0; i < 3; i++){}
+			let response = await fetch(link, {mode: 'no-cors'}) //+ link_2[0].photo_200_orig + '/article/fetch/post/image', {
+			//   method: 'POST',
+			//   body: new Blob()
+			// });
+			// let response = await fetch(link + link_2[0].photo_200_orig)
+			console.log(response)
+		
+			// сервер ответит подтверждением и размером изображения
+			let result = await response.json();
+			alert(result.message);
+			setTegs(result.message) // <- add methods
+		}
+
+		// friends.addEventListener('load', event => {console.log("Gone! Done!")})
+
+		submit()
+		
+		
+
+		// async function fetch_2 () {
+		// 	let response = await fetch()
+		// }
+
 	}, []);
 
 	const go = e => {
@@ -47,8 +77,8 @@ const App = () => {
 				<AppRoot>
 					<SplitLayout>
 						<SplitCol>
-							<View activePanel={activePanel}>
-								<Home id='home' friends = {friends} />
+							<View activePanel={activePanel} style={{ backgroundImage: `url(${background})` }}>
+								<Home id='home' friends = {friends} tegs = {our_tegs}/>
 							</View>
 						</SplitCol>
 					</SplitLayout>

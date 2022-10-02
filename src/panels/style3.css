@@ -1,0 +1,120 @@
+.body {
+    background-color: #111;
+    /* display: flex; */
+}
+
+.items_container {
+    width: 100%;
+    top: 40px;
+    position: absolute;
+}
+
+
+.photo_container {
+    /* display: none; */
+    /* visibility: hidden; */
+    width: 299px;
+    height: 435px;
+    margin: 0px auto;
+    
+    border: 5px dashed #447BBA;
+    border-radius: 10px;
+    display: flex;
+}
+
+.photo_button {
+    /* display: none; */
+    box-sizing: border-box;
+
+    /* position: relative; */
+    width: 205px;
+    height: 205px;
+    margin: auto auto;
+    /* left: 77px;
+    top: 153px; */
+
+    border: 5px dashed #447BBA;
+    border-radius: 10px;
+    /* display: flex; */
+}
+
+.camera_icon {
+    /* color: #447BBA; */
+    /* background-color: #447BBA; */
+    fill: #447BBA;
+    width: 180px;
+    height: 150px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.camera_button_text {
+    position: relative;
+    width: 180px;
+    height: 38px;
+    /* left: 80px; */
+    top: 5px;
+    margin: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    /* display: flex; */
+    /* align-items: flex-end; */
+    text-align: center;
+
+    color: #447BBA;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.items_container_1 {
+    width: 100%;
+    height: 434px;
+    top: 600px;
+    position: absolute;
+}
+
+.background_photo {
+    background-image: url(../src/img/channels4_profile.jpg);
+    background-position:center center;
+    background-size:cover;
+    width: 299px;
+    height: 434px;
+    margin: 0px auto;
+    display: flex;
+    border-radius: 10px;
+}
+
+.photo {
+    width: 299px;
+    height: 299px;
+    margin: auto 0px;
+    background-image: url(../src/img/channels4_profile.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.blur {
+    height: 434px;
+    width: 299px;
+    display: flex;
+    position: absolute;
+    backdrop-filter: blur(10px);
+}
